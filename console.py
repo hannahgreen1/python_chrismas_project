@@ -15,3 +15,6 @@ elf_repository.save(elf_2)
 
 toy_1 = Toy("Ted", "teddy bear", 5, 8, 7, elf_1)
 toy_repository.save(toy_1)
+
+toy_2 = Toy("Woody", "Toy story doll", 5, 8, 10, elf_2)
+toy_repository.save(toy_2)
