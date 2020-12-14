@@ -4,6 +4,9 @@ import repositories.elf_repository as elf_repository
 from models.toy import Toy
 import repositories.toy_repository as toy_repository
 
+toy_repository.delete_all()
+elf_repository.delete_all()
+
 elf_1 = Elf("Buddy")
 elf_repository.save(elf_1)
 

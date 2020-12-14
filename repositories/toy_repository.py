@@ -17,3 +17,22 @@ def select_all():
         toy = Toy(result["name"], result["description"], result["quantity"], result["target"], result["value"], elf, result["id"])
         toys.append(toy)
     return toys
+
+def select(id):
+    sql = "SELECT * FROM toys WHERE id = %s"
+    values = [id]
+
+    result = run_sql(sql, values)
+    elf = elf_repository.select(result["elf_id"])
+    toy = Toy(result["name"], result["description"], result["quantity"], result["target"], result["value"], elf, result["id"])
+    return toy
+
+def delete_all():
+    sql = "DELETE FROM toys"
+    run_sql(sql)
+
+def delete(id):
+    sql = "DELETE FROM toys WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
+
