@@ -36,3 +36,12 @@ def delete(id):
     values = [id]
     run_sql(sql, values)
 
+def delete(id):
+    sql = "DELETE FROM toys WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
+
+def update(toy):
+    sql = "UPDATE toys SET (name, description, quantity, target, value, elf_id = (%s, %s, %s, %s, %s, %s) WHERE id = %s"
+    values = [toy.name, toy.description, toy.quantity, toy.target, toy.value toy.elf.id, toy.id]
+    run_sql(sql, values)

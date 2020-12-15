@@ -37,7 +37,7 @@ def delete(id):
     run_sql(sql, values)
 
 
-def update(human):
+def update(elf):
     sql = "UPDATE elves SET name = %s WHERE id = %s"
     values = [elf.name, elf.id]
     run_sql(sql, values)
